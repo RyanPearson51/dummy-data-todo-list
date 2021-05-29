@@ -52,18 +52,23 @@ const populateTodos = (data) => {
         li.appendChild(text)
         ol.appendChild(li)
     })
+}
 
-    /*for (let i = 0; i < arrayOfTodos.length; i++){
-        
-        let li = document.createElement('li');
+const completedTodos = () => {
+    document.getElementById("todo-list").innerHTML = "";
+    let completedTodosArray = arrayOfTodos.filter(done => done.completed ==true);
+    
+    console.log('completedTodosArray:', completedTodosArray)
+    
+    populateTodos(completedTodosArray)
+}
 
-        let title = arrayOfTodos[i].title;
-
-        let titleText = document.createTextNode(title);
-
-        li.appendChild(titleText);
-
-        ol.appendChild(li);
-}*/
+const incompleteTodos = () => {
+    document.getElementById("todo-list").innerHTML = "";
+    let incompleteTodosArray = arrayOfTodos.filter(done => done.completed ==false);
+    
+    console.log('incompleteTodosArray:', incompleteTodosArray)
+    
+    populateTodos(incompleteTodosArray)
 }
 
