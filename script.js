@@ -23,5 +23,19 @@ const logTodos = () => {
 }
 
 const populateTodos = () => {
+    let ol = document.getElementById('todo-list');
 
+    for (let i = 0; i < arrayOfTodos.length; i++){
+        
+        let li = document.createElement('li');
+
+        let title = arrayOfTodos[i].title;
+
+        let titleText = document.createTextNode(title);
+
+        li.appendChild(titleText);
+
+        ol.appendChild(li);
 }
+}
+
