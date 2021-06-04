@@ -6,15 +6,30 @@
     <!-- link to CSS code -->
     <link rel="stylesheet" href="style.css">
     <!-- link to JavaScript code -->
-    <script src="script.js"></script>
+    
   </head>
   <body>
+      
+      <div class = "row1">
     <button onclick="fetchTodos()">Fetch Todos</button>
     <button onclick="logTodos()">Log Todos</button>
     <button onclick="populateTodos()">Populate Todos</button>
+      </div>
+      
+    <div class = "userId">
+        <br><input id="filterBy" type = "text" value = "">
+        <button onclick="filterTodos()">Filter Todos</button>
+    </div><br>
+    <div class = "completed">
+        <button onclick = "completedTodos()">Show Complete Todos</button>
+        <button onclick = "incompleteTodos()">Show Incomplete Todos</button>
+    </div>
+    <h1>Todo List</h1>
+
     <ol id="todo-list">
-        
+        <!--LIs go here-->
     </ol>
+    <script src="script.js"></script>
   </body>
 </html>
 
